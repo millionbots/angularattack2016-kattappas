@@ -1,12 +1,10 @@
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
-    vendor: ['expose?$!expose?jQuery!jquery', 'bootstrap'],
-    polyfills: [
-        'angular2/bundles/angular2-polyfills.js',
-        'es6-shim/es6-shim.js'
-    ],
-    app: ['./app/app.ts']
+    polyfills: './app/polyfills.ts',
+    vendor: './app/vendor.ts',
+    app: './app/app.ts'
   },
   output: {
     path: __dirname,
@@ -34,6 +32,15 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['app', 'vendor', 'polyfills']
+    }),
+
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    })
+  ],
   resolve: {
     extensions: ["", ".js", ".ts"]
   }
