@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component}  from '@angular/core';
 import {LoginComponent} from './login/login.component.ts';
+
 let appTemplate = require('./app.template.html');
 
 @Component({
