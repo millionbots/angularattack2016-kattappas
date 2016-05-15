@@ -1,5 +1,9 @@
 <div>
-    <ul>
-        <li *ngFor="#product of products">{{product.name}}</li>
+  <div class="row category" *ngFor="let category of categories">
+    <ul class="clearfix col-xs-12">
+        <li *ngFor="let product of products[category]" class="product col-lg-4">
+          <label class="col-xs-12">{{product.name}}</label>
+        </li>
     </ul>
+  </div>
 </div>
