@@ -1,16 +1,16 @@
 import {OnInit, OnDestroy}  from '@angular/core';
 import {UserService} from './user.service.ts';
 let subscriber: any;
-export class User implements OnInit, OnDestroy { 
+export class User implements OnInit, OnDestroy {
     public userName: string;
     public email: string;
-    
-    constructor (private userSrv: UserService) {
+
+    constructor(private userSrv: UserService) {
         this.userName = localStorage.getItem("userName");
         this.email = localStorage.getItem("email");
     }
 
-    ngOnInit () {
+    ngOnInit() {
         let _this = this;
         subscriber = this.userSrv.getUserStatus().subscribe((userName: string) => {
             _this.userName = userName;
@@ -18,7 +18,9 @@ export class User implements OnInit, OnDestroy {
         });
     }
 
-    ngOnDestroy () {
-        subscriber.dispose();
+    ngOnDestroy() {
+        if (subscriber) {
+            subscriber.dispose();
+        }
     }
 }
