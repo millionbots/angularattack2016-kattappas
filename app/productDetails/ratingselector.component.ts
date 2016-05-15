@@ -3,6 +3,7 @@ import {Component, EventEmitter, OnInit, Output} from "@angular/core";
 @Component({
 	selector: "rating-selector",
 	template: `<div>
+		<span>Rating</span>
 		<select #sel (change)="select.emit($event.target.value)">
 			<option *ngFor="#rate of ratings">
 				{{rate}}

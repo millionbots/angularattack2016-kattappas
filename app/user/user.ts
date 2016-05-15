@@ -19,7 +19,7 @@ export class User implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        if (subscriber) {
+        if (subscriber && typeof subscriber.dispose !== "undefined") {
             subscriber.dispose();
         }
     }
