@@ -1,4 +1,6 @@
 import {Component} from '@angular/core';
+import {Router} from "@angular/router-deprecated";
+
 import {ProductsService} from '../products/products.service.ts';
 
 let dashboardTemplate = require('./dashboard.template.html');
@@ -12,7 +14,8 @@ let styles = require('./dashboard.scss');
 export class DashboardComponent {
     topProducts: Array<any> = [];
 
-    constructor(private productsService: ProductsService) {
+    constructor(private productsService: ProductsService,
+                private router: Router) {
 
     }
 
@@ -36,5 +39,10 @@ export class DashboardComponent {
                 this.topProducts.push(sortedMobiles[0]);
                 this.topProducts.push(sortedNotebooks[0]);
             });
+    }
+    
+    viewDetails(product: any){
+        let link = ['ProductDetails', { id: product.productId, category: product.category }];
+        this.router.navigate(link);
     }
 }

@@ -51,7 +51,9 @@ export class ProductDetailsComponent extends User implements OnInit {
 			review: this.reviewComment,
 			reviewedByEmail: this.email,
 			reviewedByUserName: this.userName,
-			timeStamp: (new Date()).toUTCString()
+			timeStamp: (new Date()).toUTCString(),
+			likes: 0,
+			dislikes: 0
 		});
 	}
 }
