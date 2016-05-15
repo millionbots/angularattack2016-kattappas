@@ -3,10 +3,12 @@ import {ProductsService} from "../gadgets/products.service.ts";
 import { RouteParams } from '@angular/router-deprecated';
 
 let productDetailsTemplate = require("./productDetails.template.html");
+let styles = require('./product-details.scss');
 
 @Component({
 	selector: "product-details",
-	template: productDetailsTemplate
+	template: productDetailsTemplate,
+	styles: ['' + styles]
 })
 export class ProductDetailsComponent implements OnInit {
 	product: any;
@@ -29,7 +31,7 @@ export class ProductDetailsComponent implements OnInit {
 				}
 			});
 	}
-	
+
 	productSpecs(input: any) {
         var e = document.createElement('div');
         e.innerHTML = input;

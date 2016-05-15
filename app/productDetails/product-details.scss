@@ -1,0 +1,23 @@
+.product-details{
+  .tech-specs{
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+  }
+  .review-data{
+    list-style: none;
+    border: 1px solid #aaa;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: white;
+  }
+  .reviews-list{
+    padding: 20px 0;
+    background-color: #eee;
+    >li{
+      list-style: none;
+    }
+    .reviewer-name{color:#aaa}
+  }
+}

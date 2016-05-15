@@ -1,6 +1,17 @@
-<div>
-	<img [src]="product.imageUrl">
-	<span [innerHTML]="productSpecs(product.specs)">
-		
-	</span>
+<div class="container product-details">
+	<h3>{{product.name}}</h3>
+	<img class="col-md-3 col-sm-4" [src]="product.imageUrl">
+	<p class="col-md-8 col-md-offset-1 col-sm-8 tech-specs" [innerHTML]="productSpecs(product.specs)"></p>
+	<div class="col-xs-12 no-padding">
+		<ul class="clearfix reviews-list">
+			<li *ngFor="#reviewData of product.reviews" class="col-lg-12 col-md-12 clearfix">
+				<div class="review-data clearfix">
+					<p class="col-lg-12 no-padding">{{reviewData.review}}</p>
+					<span class="col-xs-5 pull-left reviewer-name">{{reviewData.reviewedByUserName}}</span>
+					<a href="javascript:void(0)" class="col-xs-1 pull-left"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+					<a href="javascript:void(0)" class="col-xs-1 pull-left"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+				</div>
+			</li>
+		</ul>
+	</div>
 </div>
