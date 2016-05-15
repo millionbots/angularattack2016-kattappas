@@ -10,7 +10,7 @@
 			</div>
 			<div class="modal-body">
 				<div class="col-sm-12" *ngIf="isNewUser">
-					<form id="signupForm"  #signupForm="ngForm">
+					<form id="signupForm" #signupForm = "ngForm">
 						<div class="row form-group">
 							<label class="sr-only col-sm-4 control-label">User Name</label>
 							<div class="col-sm-12">
@@ -18,7 +18,11 @@
 								<input type="text"
 									   [(ngModel)]="signupModel.userName"
 									   class="form-control"
-									   placeholder="Username" />
+									   placeholder="Username"
+										 required  ngControl="userName" [ngStyle]="{'border': userName.valid || userName.pristine ? '': '1px solid red'}"  #userName="ngForm"/>
+										 <span [hidden]="userName.valid || userName.pristine" class="col-xs-12 alert-danger">
+		 	 			        	Username is required
+		 	 			       	</span>
 							</div>
 						</div>
 						<div class="row form-group">
@@ -29,7 +33,11 @@
 									   [(ngModel)]="signupModel.email"
 									   class="form-control"
 									   placeholder="Email"
+										  required  ngControl="email" [ngStyle]="{'border': email.valid || email.pristine ? '': '1px solid red'}"  #email="ngForm"
 									   />
+							 <span [hidden]="email.valid || email.pristine" class="col-xs-12 alert-danger">
+	 			        	email is required
+	 			       	</span>
 							</div>
 						</div>
 						<div class="row form-group">
@@ -54,22 +62,27 @@
 								/>
 							</div>
 						</div>
+						<button type="submit" form="signupForm" class="btn btn-primary col-xs-12" *ngIf="isNewUser" (click)="signup()">Submit</button>
+						<div class="col-sm-12 text-center" *ngIf="isNewUser">
+							<span>Existing user?</span>
+							<a href="#" (click)="isNewUser=!isNewUser">Login</a>
+						</div>
 					</form>
 				</div>
 				<div class="col-sm-12" *ngIf="!isNewUser">
-					<form id="loginForm"  #loginForm="ngForm">
+					<form id="loginForm" #loginForm="ngForm">
 						<div class="row form-group">
 							<label class="sr-only col-sm-3 control-label">Email</label>
 							<div class="col-sm-12">
-								<i class="glyphicon glyphicon-envelope"></i>
-								<input type="text"
-									   [(ngModel)]="loginModel.email"
-									   class="form-control"
-									   placeholder="Email" required  ngControl="email"  #email="ngForm" />
-							</div>
-							<div [hidden]="email.valid || email.pristine" class="alert alert-danger">
-								email is required
-							</div>
+				        <i class="glyphicon glyphicon-envelope"></i>
+				        <input type="text"
+				            [(ngModel)]="loginModel.email"
+				            class="form-control"
+				            placeholder="Email" required  ngControl="email" [ngStyle]="{'border': email.valid || email.pristine ? '': '1px solid red'}"  #email="ngForm" />
+								<span [hidden]="email.valid || email.pristine" class="col-xs-12 alert-danger">
+	 			        	email is required
+	 			       	</span>
+			       </div>
 						</div>
 						<div class="row form-group">
 							<label class="sr-only col-sm-3 control-label">Password</label>
@@ -81,21 +94,16 @@
 									   placeholder="Password" />
 							</div>
 						</div>
+						<button type="submit" form="loginForm" class="btn btn-primary col-xs-12" *ngIf="!isNewUser" (click)="login()" [disabled]="!loginForm.form.valid">Login</button>
+						<div class="col-sm-12 text-center" *ngIf="!isNewUser">
+							<span>Not a Member?</span>
+							<a href="#" (click)="isNewUser=!isNewUser">Sign up now</a>
+						</div>
 					</form>
 				</div>
 				<div class="clearfix"></div>
 			</div>
 			<div class="modal-footer">
-				<button type="submit" form="loginForm" class="btn btn-primary col-sm-offset-3 col-sm-6" *ngIf="!isNewUser" (click)="login()">Login</button>
-				<div class="col-sm-12" *ngIf="!isNewUser">
-					<span>Not a Member?</span>
-					<a href="#" (click)="isNewUser=!isNewUser">Sign up now</a>
-				</div>
-				<button type="submit" form="signupForm" class="btn btn-primary col-sm-offset-3 col-sm-6" *ngIf="isNewUser" (click)="signup()">Submit</button>
-				<div class="col-sm-12" *ngIf="isNewUser">
-					<span>Existing user?</span>
-					<a href="#" (click)="isNewUser=!isNewUser">Login</a>
-				</div>
 			</div>
 		</div>
 	</div>
