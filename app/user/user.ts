@@ -3,9 +3,13 @@ import {UserService} from './user.service.ts';
 let subscriber: any;
 export class User implements OnInit, OnDestroy { 
     public userName: string;
+    public email: string;
+    
     constructor (private userSrv: UserService) {
-        this.userName = localStorage.getItem("userName")
+        this.userName = localStorage.getItem("userName");
+        this.email = localStorage.getItem("email");
     }
+
     ngOnInit () {
         let _this = this;
         subscriber = this.userSrv.getUserStatus().subscribe((userName: string) => {
@@ -13,6 +17,7 @@ export class User implements OnInit, OnDestroy {
             console.log(userName)
         });
     }
+
     ngOnDestroy () {
         subscriber.dispose();
     }

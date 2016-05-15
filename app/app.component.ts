@@ -30,7 +30,7 @@ let styles = require('./header.scss');
     useAsDefault: true
   },
   {
-    path: '/productDetails/:id',
+    path: '/productDetails/:id/:category',
     name: 'ProductDetails',
     component: ProductDetailsComponent
   }

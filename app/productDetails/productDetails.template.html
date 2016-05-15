@@ -1,6 +1,11 @@
 <div>
 	<img [src]="product.imageUrl">
 	<span [innerHTML]="productSpecs(product.specs)">
-		
 	</span>
+	
+	<div class="conntrol-group">
+		<input type="text" [(ngModel)]="reviewComment" >
+		<rating-selector (select)="reviewRating = $event"></rating-selector>
+		<button (click)="postReview()" class="btn btn-primary">Post</button>
+	</div>
 </div>
