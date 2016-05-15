@@ -16,7 +16,7 @@ export class DashboardComponent {
 
     }
 
-    private sortProducts(prod1, prod2) {
+    private sortProducts(prod1: any, prod2: any) {
         if (prod1.rating > prod2.rating)
             return -1;
         else if (prod1.rating < prod2.rating)
