@@ -12,7 +12,7 @@ let styles = require('./product.scss');
 })
 export class ProductsComponent implements OnInit {
     products:any = {};
-
+    public selectedCategory: string = "any";
     constructor(private productsService: ProductsService) {
     }
 
