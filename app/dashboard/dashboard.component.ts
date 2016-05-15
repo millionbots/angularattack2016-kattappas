@@ -12,7 +12,7 @@ let styles = require('./dashboard.scss');
 })
 export class DashboardComponent {
     topProducts: Array<any> = [];
-    users: Array<any>;
+    users: any;
     usersList: any;
     
     constructor(private productsService: ProductsService,
@@ -21,7 +21,7 @@ export class DashboardComponent {
 
     }
 
-    private sortProducts(prod1, prod2) {
+    private sortProducts(prod1: any, prod2: any) {
         if (prod1.rating > prod2.rating)
             return -1;
         else if (prod1.rating < prod2.rating)
@@ -43,7 +43,7 @@ export class DashboardComponent {
                 this.topProducts.push(sortedNotebooks[0]);
                 
                 this.users = this.userService.getUsers();
-                this.users.subscribe(users => {
+                this.users.subscribe((users: any) => {
                     this.usersList = users;
                 });
             });
