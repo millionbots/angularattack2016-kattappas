@@ -49,6 +49,7 @@
 									   class="form-control pwd"
 									   placeholder="Password"
 									   (keyup)="validatePasswords()"
+										 required  ngControl="password" [ngStyle]="{'border': password.valid || password.pristine ? '': '1px solid red'}"  #password="ngForm"
 									   />
 							</div>
 						</div>
