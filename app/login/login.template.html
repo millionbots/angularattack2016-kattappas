@@ -46,8 +46,9 @@
 								<i class="glyphicon glyphicon-lock"></i>
 								<input type="password"
 									   [(ngModel)]="signupModel.password"
-									   class="form-control"
+									   class="form-control pwd"
 									   placeholder="Password"
+									   (keyup)="validatePasswords()"
 									   />
 							</div>
 						</div>
@@ -57,12 +58,13 @@
 								<i class="glyphicon glyphicon-lock"></i>
 								<input type="password"
 									   [(ngModel)]="signupModel.confirmPassword"
-									   class="form-control"
+									   class="form-control pwd"
 									   placeholder="Confirm Password"
+									   (keyup)="validatePasswords()"
 								/>
 							</div>
 						</div>
-						<button type="submit" form="signupForm" class="btn btn-primary col-xs-12" *ngIf="isNewUser" (click)="signup()">Submit</button>
+						<button type="submit" form="signupForm" class="btn btn-primary col-xs-12" *ngIf="isNewUser" (click)="signup()" [disabled]="!signupForm.form.valid || !isValidPassword">Submit</button>
 						<div class="col-sm-12 text-center" *ngIf="isNewUser">
 							<span>Existing user?</span>
 							<a href="#" (click)="isNewUser=!isNewUser">Login</a>

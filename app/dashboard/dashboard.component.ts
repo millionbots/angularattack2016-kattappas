@@ -31,6 +31,7 @@ export class DashboardComponent {
     ngOnInit() {
         this.productsService.getProducts()
             .subscribe((products) => {
+                this.topProducts = [];
                 let sortedCameras = products.Cameras.sort(this.sortProducts);
                 let sortedMobiles = products.Mobiles.sort(this.sortProducts);
                 let sortedNotebooks = products.Notebooks.sort(this.sortProducts);
