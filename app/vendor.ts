@@ -7,3 +7,6 @@ import '@angular/http';
 import '@angular/router-deprecated';
 // RxJS
 import 'rxjs';
+import * as jQuery from 'jquery';
+window.jQuery = window.$ = jQuery;
+import 'bootstrap';

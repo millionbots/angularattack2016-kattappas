@@ -15,12 +15,13 @@
             <li> <a href="../getting-started/">About</a> </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://themes.getbootstrap.com">Products</a></li>
+            <li><a [routerLink]="['Gadgets']">Products</a></li>
             <li><a href="http://expo.getbootstrap.com">Reviewers</a></li>
-            <li><a href="http://blog.getbootstrap.com">Blog</a></li>
+            <li><a href="javascript: void(0);" data-toggle="modal" data-target="#geekLoginModal">Login</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <dashboard></dashboard>
+    <login></login>
+    <router-outlet></router-outlet>
 </div>
