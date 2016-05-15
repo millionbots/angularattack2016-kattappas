@@ -3,7 +3,7 @@
 		"productId": 50285046,
 		"name": "Straight Talk Apple iPhone 5S 16GB Prepaid Smartphone",
 		"price": 199,
-		"category": "Cell Phones/Straight Talk Wireless/Straight Talk Cell Phones",
+		"category": "Mobiles",
 		"rating": "4.362",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-56b1/k2-_47a4f674-1a81-438d-8e12-a76c7f9afff6.v1.jpg"
 	},
@@ -11,7 +11,7 @@
 		"productId": 39322435,
 		"name": "Straight Talk Apple iPhone 5S 16GB 4G LTE Refurbished Prepaid Smartphone w/ Bonus $45 Service Plan",
 		"price": 198,
-		"category": "Cell Phones/No-Contract Phones & Plans/Apple iPhone on Straight Talk",
+		"category": "Mobiles",
 		"rating": "4.484",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-a85d/k2-_bc50a318-cd45-475f-83d8-ed36e139c2aa.v1.jpg"
 	},
@@ -19,7 +19,7 @@
 		"productId": 39665237,
 		"name": "Straight Talk Apple iPhone 6 16GB 4G LTE Prepaid Smartphone",
 		"price": 399,
-		"category": "Cell Phones/No-Contract Phones & Plans/Apple iPhone on Straight Talk",
+		"category": "Mobiles",
 		"rating": "4.371",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-e817/k2-_14bc47e1-ec4b-42d9-b15f-0fdc64abdb79.v1.jpg"
 	},
@@ -27,7 +27,7 @@
 		"productId": 45599395,
 		"name": "Straight Talk Apple iPhone 5C 8GB 4G LTE Refurbished Prepaid Smartphone w/ Bonus $45 30-Day Plan",
 		"price": 189,
-		"category": "Cell Phones/No-Contract Phones & Plans/Shop all No-Contract Phones",
+		"category": "Mobiles",
 		"rating": "4.333",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-ea4b/k2-_a8fd77b7-630d-4d67-b720-bedb16b7206f.v2.jpg"
 	},
@@ -35,7 +35,7 @@
 		"productId": 42104299,
 		"name": "Apple iPhone 6 Refurbished AT (Locked)",
 		"price": 399,
-		"category": "Cell Phones/Shop Phones by Operating System/Apple iOS",
+		"category": "Mobiles",
 		"rating": "4.753",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-b3a6/k2-_6e4da254-d0d1-45a6-9690-e40dbf92bf3c.v1.jpg"
 	},
@@ -43,7 +43,7 @@
 		"productId": 39671223,
 		"name": "Straight Talk Apple iPhone 6 Plus 16GB 4G LTE Prepaid Smartphone",
 		"price": 499,
-		"category": "Cell Phones/No-Contract Phones & Plans/Apple iPhone on Straight Talk",
+		"category": "Mobiles",
 		"rating": "4.322",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-f684/k2-_802830eb-203a-4cfd-be9f-5c3ccde0f3c0.v1.jpg"
 	},
@@ -51,14 +51,14 @@
 		"productId": 42381065,
 		"name": "Straight Talk Apple iPhone 5C 8GB 4G LTE Prepaid Smartphone",
 		"price": 199,
-		"category": "Cell Phones/No-Contract Phones & Plans/Apple iPhone on Straight Talk",
+		"category": "Mobiles",
 		"rating": "4.045"
 	},
 	{
 		"productId": 45599204,
 		"name": "Straight Talk Apple iPhone 6 16GB 4G LTE Refurbished Prepaid Smartphone w/ Bonus $45 30-Day Plan",
 		"price": 495,
-		"category": "Cell Phones/No-Contract Phones & Plans/Shop all No-Contract Phones",
+		"category": "Mobiles",
 		"rating": "4.2",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-3984/k2-_5e12cca8-822d-4d84-bd6f-16178f8f2702.v1.jpg"
 	},
@@ -66,7 +66,7 @@
 		"productId": 49230903,
 		"name": "Refurbished Apple iPhone 5S 16GB GSM Smartphone (Unlocked)",
 		"price": 259,
-		"category": "Cell Phones/Refurbished Phones",
+		"category": "Mobiles",
 		"rating": "3.286",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-4fde/k2-_a86d73ae-c775-4681-bc41-abc95e207c25.v2.jpg"
 	},
@@ -74,14 +74,14 @@
 		"productId": 42104296,
 		"name": "Apple iPhone 6 Plus Refurbished AT (Locked)",
 		"price": 449,
-		"category": "Cell Phones/No-Contract Phones & Plans/Shop all No-Contract Phones",
+		"category": "Mobiles",
 		"rating": "4.741",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-b2ac/k2-_444d4e25-5cd8-46e1-ac35-f9831890e5e9.v10.jpg"
 	},
 	{
 		"productId": 35524405,
 		"name": "Sony Black DSC-H300/B Digital Camera with 20.1 Megapixels and 35x Optical Zoom",
-		"category": "Electronics/Cameras & Camcorders/All Cameras",
+		"category": "Mobiles",
 		"rating": "4.028",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-b12a/k2-_90b2a745-c4fc-46fc-8782-397b8ca154af.v1.jpg"
 	},
@@ -89,7 +89,7 @@
 		"productId": 40659257,
 		"name": "Sony Silver DSC-W810 Digital Camera with 20.1 Megapixels and 6x Optical Zoom",
 		"price": 89,
-		"category": "Electronics/Cameras & Camcorders/All Cameras",
+		"category": "Mobiles",
 		"rating": "3.0",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-d132/k2-_eb5693dc-4596-4f46-b93f-ba532eea180b.v2.jpg"
 	},
@@ -97,7 +97,7 @@
 		"productId": 35524403,
 		"name": "Sony DSC-W830 Digital Camera with 20.1 Megapixels and 8x Optical Zoom (Available in Black or Silver)",
 		"price": 109,
-		"category": "Electronics/Cameras & Camcorders/All Cameras",
+		"category": "Mobiles",
 		"rating": "4.067",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-5d61/k2-_00980437-87db-499b-9008-098fd45b48cc.v1.jpg"
 	},
@@ -105,7 +105,7 @@
 		"productId": 35524411,
 		"name": "Sony Black DSC-H400/B Digital Camera with 20.1 Megapixels and 63x Optical Zoom",
 		"price": 248,
-		"category": "Electronics/Cameras & Camcorders/All Cameras",
+		"category": "Mobiles",
 		"rating": "3.952",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-1a65/k2-_a0d9422b-ef84-478a-81c8-8f3bdf5ac355.v1.jpg"
 	},
@@ -113,7 +113,7 @@
 		"productId": 46570724,
 		"name": "Refurbished Sony HDR-CX440 8GB Wi-Fi 60p HD Camcorder Bundle with Carrying Case 16GB SD Card",
 		"price": 146,
-		"category": "Electronics/Cameras & Camcorders/All Camcorders",
+		"category": "Mobiles",
 		"rating": "4.389",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-a8cf/k2-_3451fe24-2902-42f8-b591-489e63f86594.v2.jpg"
 	},
@@ -121,7 +121,7 @@
 		"productId": 35524398,
 		"name": "Sony HDR-CX240/L Blue HD Camcorder with 27x Optical Zoom, 2.7\" LCD and SteadyShot Image Stabilization",
 		"price": 189,
-		"category": "Electronics/Cameras & Camcorders/All Camcorders",
+		"category": "Mobiles",
 		"rating": "4.0",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-8e4b/k2-_4b40bd25-0cb7-4a96-8362-2a39e18f4359.v1.jpg"
 	},
@@ -129,7 +129,7 @@
 		"productId": 21550783,
 		"name": "Sony DSC-RX100 20.2 MP Exmor CMOS Sensor Digital Camera (Black) with Lightroom",
 		"price": 498,
-		"category": "Electronics/Cameras & Camcorders/All Cameras",
+		"category": "Mobiles",
 		"rating": "4.212",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-9bdb/k2-_5af39c3b-bfd3-4b3e-84ba-9935ae588686.v1.jpg"
 	},
@@ -137,7 +137,7 @@
 		"productId": 35524415,
 		"name": "Sony Black Alpha a7 ILCE-7/B Digital SLR Camera with 24.3 Megapixels",
 		"price": 998,
-		"category": "Electronics/Cameras & Camcorders/All Cameras",
+		"category": "Mobiles",
 		"rating": "4.7",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-2974/k2-_16fbc10a-0e9e-476e-b5a6-b60479ec12d7.v1.jpg"
 	},
@@ -145,7 +145,7 @@
 		"productId": 44907361,
 		"name": "Sony Cyber-shot DSCH300B Digital Camera in Black + 32GB Accessory Kit",
 		"price": 209,
-		"category": "Electronics/Cameras & Camcorders/All Cameras",
+		"category": "Mobiles",
 		"rating": "4.4",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-326c/k2-_3b7d3368-36c2-4d6c-82a3-bf7db1d36951.v2.jpg"
 	},
@@ -153,7 +153,7 @@
 		"productId": 35524428,
 		"name": "Sony Alpha a6000 24.3 Megapixel Mirrorless Interchangeable Lens Digital Camera with 16-50mm Lens (Black)",
 		"price": 598,
-		"category": "Electronics/Cameras & Camcorders/All Cameras",
+		"category": "Mobiles",
 		"rating": "4.458",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-a594/k2-_5c6e54bc-514a-4ce6-b305-2f71973b5c6f.v1.jpg"
 	},
@@ -161,7 +161,7 @@
 		"productId": 49332578,
 		"name": "Refurbished HP Black 15.6\" 15-f233wm Laptop PC with Intel Celeron N3050 Processor, 4GB Memory, 500GB Hard Drive and Windows 10 Home",
 		"price": 189,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "3.083",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-8bda/k2-_ed9c738d-ba74-4d81-8635-d7dc0e061177.v1.jpg"
 	},
@@ -169,7 +169,7 @@
 		"productId": 46429969,
 		"name": "HP Black 15.6\" 15-f233wm Laptop PC with Intel Celeron N3050 Processor, 4GB Memory, 500GB Hard Drive and Windows 10 Home",
 		"price": 279,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "3.491",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-9277/k2-_9e28e229-e4a0-4609-ba7d-5dc7da826594.v2.jpg"
 	},
@@ -177,7 +177,7 @@
 		"productId": 50285007,
 		"name": "Acer Diamond Black 15.6\" Aspire ES1-512-C1PW Laptop PC with Intel Celeron N2840 Processor, 4GB Memory, 500GB Hard Drive and Windows 10",
 		"price": 229,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "3.667",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-eca1/k2-_9cf3f7fe-cc70-4d31-b0e4-12e65b7c8f57.v1.jpg"
 	},
@@ -185,7 +185,7 @@
 		"productId": 46429958,
 		"name": "HP Flyer Red 15.6\" 15-f272wm Laptop PC with Intel Pentium N3540 Processor, 4GB Memory, 500GB Hard Drive and Windows 10 Home",
 		"price": 299,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "4.069",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-a6de/k2-_fa54756c-8280-460c-8ea2-c98763afad8d.v1.jpg"
 	},
@@ -193,7 +193,7 @@
 		"productId": 49689223,
 		"name": "Asus Dark Blue 14\" EEEBOOK E402SA-DS01-BL Laptop PC with Intel Celeron N3050 Dual-Core Processor, 2GB Memory, 32GB Flash Storage and Windows 10",
 		"price": 165,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "3.929",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-928f/k2-_1bb5e466-a226-402a-b206-43bbb00ab4e0.v1.jpg"
 	},
@@ -201,7 +201,7 @@
 		"productId": 46429964,
 		"name": "HP Turbo Silver 15.6\" 15-ac143wm Laptop PC with Intel Core i5-5200U Processor, 6GB Memory, 1TB Hard Drive and Windows 10 Home",
 		"price": 329,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "3.714",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-ebc1/k2-_4221f234-6075-402c-b8a0-79e8a518550e.v1.jpg"
 	},
@@ -209,7 +209,7 @@
 		"productId": 49835462,
 		"name": "Dell Black 15.6\" Inspiron i3552 Laptop PC with Intel Celeron N3050 Processor, 4GB Memory, 500GB Hard Drive and Windows 10 Home",
 		"price": 279,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "3.263",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-cb10/k2-_1e1f9862-e0b5-4bac-a159-888455156f1c.v1.jpg"
 	},
@@ -217,7 +217,7 @@
 		"productId": 50285009,
 		"name": "Acer Midnight Black 15.6\" Aspire E5-521-26LT Laptop PC with AMD E2-6110 Processor, 4GB Memory, 1TB Hard Drive and Windows 10 Home with Wireless Mouse, Case, and McAfee Security",
 		"price": 229.99,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "3.286",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-b104/k2-_ed01df17-007b-48e6-9a7e-212782b25252.v2.jpg"
 	},
@@ -225,7 +225,7 @@
 		"productId": 49332584,
 		"name": "Refurbished HP Silver 15.6\" 15-f271wm Laptop PC with Intel Pentium N3540 Quad-Core Processor, 4GB Memory, 500GB Hard Drive and Windows 10 Home",
 		"price": 199,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "3.411",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-1c48/k2-_71d2ba3e-28a7-42fd-93e9-945958c0a088.v1.jpg"
 	},
@@ -233,7 +233,7 @@
 		"productId": 47836539,
 		"name": "HP Black Licorice 15.6\" 15-F387WM Laptop PC with AMD A8-7410 Processor, 4GB Memory, Touchscreen, 500GB Hard Drive and Windows 10 Home",
 		"price": 329,
-		"category": "Electronics/Computers/Laptops/Laptop Computers/Laptop Computers",
+		"category": "Mobiles",
 		"rating": "4.056",
 		"imageUrl": "http://i5.walmartimages.com/dfw/dce07b8c-122a/k2-_ad6d5b23-c98c-42d3-abfd-48057fa135e8.v1.jpg"
 	}
