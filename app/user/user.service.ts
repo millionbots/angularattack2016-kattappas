@@ -36,6 +36,8 @@ export class UserService {
         this.af.database.list('/users').update(key, details);
     }
     getUserData () {
-        return JSON.parse(localStorage.getItem("user"));
+        let data = JSON.parse(localStorage.getItem("user"));
+        delete data.$key;
+        return data;
     }
 }
