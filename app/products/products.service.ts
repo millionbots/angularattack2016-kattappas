@@ -59,12 +59,7 @@ export class ProductsService {
                             prod.reviews[i].reviewedByEmail === reviewData.reviewedByEmail) {
                             prod.reviews[i] = reviewData;
                             //console.log(prod.reviews);
-                            products.update(prod.$key, { reviews: prod.reviews })
-                                .then((r) => {
-                                    console.log(r);
-                                }, (e) => {
-                                    console.log(e);
-                                });
+                            products.update(prod.$key, { reviews: prod.reviews });
                             break;
                         }
                     }

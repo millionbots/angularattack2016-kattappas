@@ -62,7 +62,7 @@ export class ProductDetailsComponent extends User implements OnInit {
 			if(review.reviewedByEmail === reviewData.reviewedByEmail 
 				&& review.timeStamp === reviewData.timeStamp){
 				if(!review.likes){
-					review.likes = 1;
+					review.likes = 0;
 				}
 				review.likes ++;
 				reviewData.likes = review.likes;
@@ -77,7 +77,7 @@ export class ProductDetailsComponent extends User implements OnInit {
 			if(review.reviewedByEmail === reviewData.reviewedByEmail 
 				&& review.timeStamp === reviewData.timeStamp){
 				if(!review.dislikes){
-					review.dislikes = 1;
+					review.dislikes = 0;
 				}
 				review.dislikes ++;
 				reviewData.dislikes = review.dislikes;
