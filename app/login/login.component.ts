@@ -107,7 +107,7 @@ export class LoginComponent extends User implements OnInit {
     }
 
     private userExists(af: any): AsyncValidatorFn {
-        var users: FirebaseListObservable = af.database.list('/users');
+        var users: FirebaseListObservable <any[]> = af.database.list('/users');
         
         return (control: Control) => {
             return users.subscribe((usersInFirebase: any) => {

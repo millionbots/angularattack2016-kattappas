@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {ProductsService} from "../gadgets/products.service.ts";
+import {ProductsService} from "../products/products.service.ts";
 import { RouteParams } from '@angular/router-deprecated';
 
 let productDetailsTemplate = require("./productDetails.template.html");
