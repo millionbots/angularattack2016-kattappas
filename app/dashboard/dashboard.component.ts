@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
-import {Router} from "@angular/router-deprecated";
-
 import {ProductsService} from '../products/products.service.ts';
+import {UserService} from '../user/user.service.ts';
 
 let dashboardTemplate = require('./dashboard.template.html');
 let styles = require('./dashboard.scss');
@@ -14,35 +13,33 @@ let styles = require('./dashboard.scss');
 export class DashboardComponent {
     topProducts: Array<any> = [];
 
-    constructor(private productsService: ProductsService,
-                private router: Router) {
+    constructor(private productsService: ProductsService, private userService: UserService){
 
     }
 
-    private sortProducts(prod1: any, prod2: any) {
-        if (prod1.rating > prod2.rating)
-            return -1;
-        else if (prod1.rating < prod2.rating)
-            return 1;
-        else
-            return 0;
-    }
-
-    ngOnInit() {
+    ngOnInit(){
         this.productsService.getProducts()
             .subscribe((products) => {
-                let sortedCameras = products.Cameras.sort(this.sortProducts);
-                let sortedMobiles = products.Mobiles.sort(this.sortProducts);
-                let sortedNotebooks = products.Notebooks.sort(this.sortProducts);
 
-                this.topProducts.push(sortedCameras[0]);
-                this.topProducts.push(sortedMobiles[0]);
-                this.topProducts.push(sortedNotebooks[0]);
+                let allProds = Array.prototype.concat.apply([],[products.Cameras, products.Mobiles, products.Notebooks]);
+
+                var sortedProds = allProds.sort(function(prod1: any, prod2: any){
+                    if(prod1.rating > prod2.rating)
+                        return -1;
+                    else if(prod1.rating < prod2.rating)
+                        return 1;
+                    else
+                        return 0;
+                });
+
+                this.topProducts.push(sortedProds[0]);
+                this.topProducts.push(sortedProds[1]);
+                this.topProducts.push(sortedProds[2]);
+
+                this.users = this.userService.getUsers();
+                this.users.subscribe(users => {
+                    _this.usersList = users;
+                });
             });
-    }
-    
-    viewDetails(product: any){
-        let link = ['ProductDetails', { id: product.productId, category: product.category }];
-        this.router.navigate(link);
     }
 }
