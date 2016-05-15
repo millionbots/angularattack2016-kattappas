@@ -17,7 +17,8 @@
             <li><a href="javascript: void(0);" data-toggle="modal" data-target="#aboutModal">About</a></li>
             <li><a [routerLink]="['Profile']">Profile</a></li>
             <li><a [routerLink]="['Products']">Products</a></li>
-            <li><a href="javascript: void(0);" data-toggle="modal" data-target="#geekLoginModal">Login</a></li>
+            <li *ngIf="!userName"><a href="javascript: void(0);" data-toggle="modal" data-target="#geekLoginModal">Login</a></li>
+            <li *ngIf="userName"><a href="javascript: void(0);" (click)="logout()">Logout</a></li>
           </ul>
         </nav>
       </div>

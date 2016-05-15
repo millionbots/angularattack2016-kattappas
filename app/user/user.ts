@@ -5,7 +5,7 @@ export class User implements OnInit, OnDestroy {
     public userName: string;
     public email: string;
 
-    constructor(private userSrv: UserService) {
+    constructor(protected userSrv: UserService) {
         this.userName = localStorage.getItem("userName");
         this.email = localStorage.getItem("email");
     }

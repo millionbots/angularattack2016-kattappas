@@ -7,6 +7,8 @@ import {ProductsComponent} from "./products/products.component.ts";
 import {ProductsService} from "./products/products.service.ts";
 import {ProductDetailsComponent} from "./productDetails/productdetails.component.ts";
 import {ProfileComponent} from './profile/profile.component.ts';
+import {User} from './user/user.ts';
+import {UserService} from './user/user.service.ts';
 
 let appTemplate = require('./app.template.html');
 let styles = require('./main.scss');
@@ -41,4 +43,15 @@ let styles = require('./main.scss');
     component: ProductDetailsComponent
   }
 ])
-export class ReviewsComponent { }
+export class ReviewsComponent extends User { 
+
+  constructor(private userSvc: UserService){
+    super(userSvc);
+  }
+
+  logout(){
+    this.userSvc.clearUser();
+    this.userName=null;
+    this.email=null;
+  }
+}
