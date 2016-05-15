@@ -12,11 +12,10 @@
         </div>
         <nav id="bs-navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li> <a href="../getting-started/">About</a> </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="javascript: void(0);" data-toggle="modal" data-target="#aboutModal">About</a></li>
             <li><a [routerLink]="['Products']">Products</a></li>
-            <li><a href="http://expo.getbootstrap.com">Reviewers</a></li>
             <li><a href="javascript: void(0);" data-toggle="modal" data-target="#geekLoginModal">Login</a></li>
           </ul>
         </nav>
@@ -24,4 +23,26 @@
     </header>
     <login></login>
     <router-outlet></router-outlet>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="aboutModal">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span>&times;</span>
+				</button>
+  			<h3 class="text-center">GadgetGeeks</h3>
+			</div>
+			<div class="modal-body col-xs-12">
+        <p class="text-center">
+          This application aims at using the interest and kinda close obession of technology geeks to provide useful info to everyone in the context of buying latest gadgets.<br><br>
+          We are very much aware of how much these geeks want to discuss, review and provide feedbacks about the technology.<br><br>
+          Here we are tryng to provide a platform for them to provide info and others can get fair idea to buy products. And based on the users feedback about the review, the reviewers are rated.
+        </p>
+			</div>
+			<div class="modal-footer">
+			</div>
+		</div>
+	</div>
 </div>

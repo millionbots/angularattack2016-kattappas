@@ -1,6 +1,6 @@
 <div>
   <div class="container sort-btn">
-    <a href="javascript:void(0);" class="col-xs-4 btn btn-primary btn-lg no-padding" (click)="selectedCategory=category" *ngFor="#category of categories">{{category}}</a>
+    <a href="javascript:void(0);" class="col-xs-4 btn btn-primary no-padding" (click)="selectedCategory=category" *ngFor="#category of categories">{{category}}</a>
   </div>
   <div class="row category" *ngFor="#category of categories" [hidden]="!(selectedCategory == 'any' || selectedCategory == category)">
     <h2 class="text-center">{{category}}</h2>
@@ -15,10 +15,9 @@
             <p><label>Rating:</label><span>{{product.rating}}</span></p>
             <p><label>Price:</label><span>${{product.price}}</span></p>
             <p><label>Reviews:</label><span>{{product.reviews.length}}</span></p>
-
-            <!-- <p [innerHTML] = "productSpecs(product.specs)"></p> -->
           </div>
-        </li>
+        </div>
+      </li>
     </ul>
   </div>
 </div>
