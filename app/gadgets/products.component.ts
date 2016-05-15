@@ -1,15 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "./products.service.ts";
 import {Product} from "./products.model.ts";
+let productsTemplate = require("./products.template.html")
 
 @Component({
     selector: 'products',
     providers: [ProductsService],
-    template: `<div>Products loaded...
-        <ul>
-            <li *ngFor="#product of products">{{product.name}}</li>
-        </ul>
-    </div>`
+    template: productsTemplate
+    // template: `<div>Products loaded...
+    //     <ul>
+    //         <li *ngFor="#product of products">{{product.name}}</li>
+    //     </ul>
+    // </div>`
 })
 export class ProductsComponent implements OnInit {
     products: Product[];
