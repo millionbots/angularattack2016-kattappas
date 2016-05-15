@@ -1,7 +1,5 @@
 import {Component, OnInit}  from '@angular/core';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
-import {Observable} from 'rxjs';
-import {AuthMethods, AuthProviders} from 'angularfire2';
 
 let loginTemplate = require('./login.template.html');
 let styles = require('./login.scss');

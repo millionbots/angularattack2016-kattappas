@@ -1,13 +1,12 @@
 import {Injectable} from "@angular/core";
-import {Http, Response} from "@angular/http";
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 @Injectable()
 export class ProductsService {
-    constructor(private httpService: Http) {
+    constructor(private af: AngularFire) {
     }
 
-    public getProducts() {
-        return this.httpService.get("app/gadgets/products.json")
-            .map((res: Response) => res.json());
+    public getProducts<FirebaseListObservable>() {
+        return this.af.database.list('/products');
     }
 }
