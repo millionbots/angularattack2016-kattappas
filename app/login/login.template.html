@@ -10,7 +10,7 @@
 			</div>
 			<div class="modal-body">
 				<div class="col-sm-12" *ngIf="isNewUser">
-					<form id="signupForm">
+					<form id="signupForm"  #signupForm="ngForm">
 						<div class="row form-group">
 							<label class="sr-only col-sm-4 control-label">User Name</label>
 							<div class="col-sm-12">
@@ -57,7 +57,7 @@
 					</form>
 				</div>
 				<div class="col-sm-12" *ngIf="!isNewUser">
-					<form id="loginForm">
+					<form id="loginForm"  #loginForm="ngForm">
 						<div class="row form-group">
 							<label class="sr-only col-sm-3 control-label">Email</label>
 							<div class="col-sm-12">
@@ -65,7 +65,10 @@
 								<input type="text"
 									   [(ngModel)]="loginModel.email"
 									   class="form-control"
-									   placeholder="Email" />
+									   placeholder="Email" required  ngControl="email"  #email="ngForm" />
+							</div>
+							<div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+								email is required
 							</div>
 						</div>
 						<div class="row form-group">
