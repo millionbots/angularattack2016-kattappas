@@ -4,6 +4,8 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {DashboardComponent} from './dashboard/dashboard.component.ts';
 import {LoginComponent} from './login/login.component.ts';
 import {ProductsComponent} from "./gadgets/products.component.ts";
+import {ProductsService} from "./gadgets/products.service.ts";
+import {ProductDetailsComponent} from "./productDetails/productdetails.component.ts";
 
 let appTemplate = require('./app.template.html');
 let styles = require('./header.scss');
@@ -12,6 +14,7 @@ let styles = require('./header.scss');
     selector: 'reviews',
     template: appTemplate,
     styles: ['' + styles],
+    providers: [ProductsService],
     directives: [LoginComponent, ROUTER_DIRECTIVES]
 })
 @RouteConfig([
@@ -25,6 +28,11 @@ let styles = require('./header.scss');
     name: 'Home',
     component: DashboardComponent,
     useAsDefault: true
+  },
+  {
+    path: '/productDetails/:id',
+    name: 'ProductDetails',
+    component: ProductDetailsComponent
   }
 ])
 export class ReviewsComponent { }

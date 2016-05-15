@@ -5,7 +5,8 @@
   <div class="row category" *ngFor="#category of categories" [hidden]="!(selectedCategory == 'any' || selectedCategory == category)">
     <h2 class="text-center">{{category}}</h2>
     <ul class="clearfix col-xs-12">
-        <li *ngFor="#product of products[category]" class="product col-lg-3 col-md-4 col-sm-6 col-xs-12 clearfix no-padding">
+      <li *ngFor="#product of products[category]" class="product col-lg-3 col-md-4 col-sm-6 col-xs-12 clearfix no-padding">
+        <div (click)="viewDetails(product)">
           <label class="col-xs-12 text-center product-name">{{product.name}}</label>
           <div class="col-xs-6">
             <img [src]="product.imageUrl" class="col-xs-12"/>
@@ -17,7 +18,8 @@
 
             <!-- <p [innerHTML] = "productSpecs(product.specs)"></p> -->
           </div>
-        </li>
+        </div>
+      </li>
     </ul>
   </div>
 </div>
