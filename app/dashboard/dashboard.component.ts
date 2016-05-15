@@ -9,33 +9,32 @@ let styles = require('./dashboard.scss');
     template: dashboardTemplate,
     styles: ['' + styles]
 })
-export class DashboardComponent { 
+export class DashboardComponent {
     topProducts: Array<any> = [];
-    
-    constructor(private productsService: ProductsService){
-        
+
+    constructor(private productsService: ProductsService) {
+
     }
-    
-    ngOnInit(){
+
+    private sortProducts(prod1, prod2) {
+        if (prod1.rating > prod2.rating)
+            return -1;
+        else if (prod1.rating < prod2.rating)
+            return 1;
+        else
+            return 0;
+    }
+
+    ngOnInit() {
         this.productsService.getProducts()
             .subscribe((products) => {
-                
-                let allProds = Array.prototype.concat.apply([],[products.Cameras, products.Mobiles, products.Notebooks]);
-                
-                var sortedProds = allProds.sort(function(prod1: any, prod2: any){
-                    if(prod1.rating > prod2.rating)
-                        return -1;
-                    else if(prod1.rating < prod2.rating)
-                        return 1;
-                    else
-                        return 0;
-                });
-                
-                this.topProducts.push(sortedProds[0]);
-                this.topProducts.push(sortedProds[1]);
-                this.topProducts.push(sortedProds[2]);
-                
-                console.log(this.topProducts);
+                let sortedCameras = products.Cameras.sort(this.sortProducts);
+                let sortedMobiles = products.Mobiles.sort(this.sortProducts);
+                let sortedNotebooks = products.Notebooks.sort(this.sortProducts);
+
+                this.topProducts.push(sortedCameras[0]);
+                this.topProducts.push(sortedMobiles[0]);
+                this.topProducts.push(sortedNotebooks[0]);
             });
     }
 }
