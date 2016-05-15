@@ -20,10 +20,10 @@ export class ProductsService {
 
     public saveProductReviews(category: string, productKey: string, review: any) {
         console.log(arguments);
-        var products = this.af.database.list(`/products/${category}`).bufferCount(11);
+        var products:any = this.af.database.list(`/products/${category}`).bufferCount(11);
         console.log(products);
-        let productsList = [];
-        products.subscribe((prs) => {
+        let productsList:any[] = [];
+        products.subscribe((prs: any) => {
             var prods = prs[prs.length - 1];
 
             for (var prod of prods) {
@@ -39,7 +39,7 @@ export class ProductsService {
             }
 
         },
-            (error) => console.log(error),
+            (error: any) => console.log(error),
             () => {
                 console.log(productsList);
             }

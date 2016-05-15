@@ -54,7 +54,7 @@ export class LoginComponent extends User implements OnInit {
     }
     constructor (af: AngularFire, private userService: UserService) {
         super(userService);
-        this.users = af.database.list('/users');
+        this.users = this.userService.getUsers();
     };
 
     ngOnInit() {

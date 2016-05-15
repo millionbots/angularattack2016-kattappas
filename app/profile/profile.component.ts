@@ -1,4 +1,5 @@
 import {Component, OnInit}  from '@angular/core';
+import {UserService} from '../user/user.service.ts';
 
 let profileTemplate = require('./profile.template.html');
 let styles = require('./profile.scss');
@@ -23,7 +24,9 @@ export class ProfileComponent implements OnInit {
 		twitter: '',
 		youtube: ''
 	};
-
+	constructor(private userService: UserService) {
+		this.profileModel = this.userService.getUserData();
+    }
 	ngOnInit() {
 		this.chart = c3.generate({
 			bindto: document.querySelector('.chart'),
@@ -47,5 +50,7 @@ export class ProfileComponent implements OnInit {
 			}
 		});
 	}
-
+	updateUserDetails () {
+		this.userService.updateUserDetails(this.profileModel);
+	}
 }

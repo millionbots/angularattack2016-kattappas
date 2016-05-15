@@ -55,6 +55,7 @@
 									   [(ngModel)]="profileModel.email"
 									   class="form-control"
 									   placeholder="Email"
+									   readonly
 									   />
 							</div>
 						</div>
@@ -85,7 +86,7 @@
 				<div class="clearfix"></div>
 			</div>
 			<div class="modal-footer">
-				<button type="submit" form="profileEditForm" class="btn btn-primary col-sm-offset-3 col-sm-6"  (click)="profile()">Update</button>
+				<button type="submit" form="profileEditForm" class="btn btn-primary col-sm-offset-3 col-sm-6"  (click)="updateUserDetails()">Update</button>
 			</div>
 		</div>
 	</div>
