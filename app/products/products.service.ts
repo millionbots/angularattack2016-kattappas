@@ -60,6 +60,7 @@ export class ProductsService {
                             prod.reviews[i] = reviewData;
                             //console.log(prod.reviews);
                             products.update(prod.$key, { reviews: prod.reviews });
+
                             break;
                         }
                     }
