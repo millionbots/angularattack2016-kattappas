@@ -18,8 +18,8 @@
 				<div class="review-data clearfix">
 					<p class="col-lg-12 no-padding">{{reviewData.review}}</p>
 					<span class="col-xs-5 pull-left reviewer-name">{{reviewData.reviewedByUserName}}</span>
-					<!-- <a href="javascript:void(0)" class="col-xs-1 pull-left"><span class="glyphicon glyphicon-thumbs-up"></span></a>
-					<a href="javascript:void(0)" class="col-xs-1 pull-left"><span class="glyphicon glyphicon-thumbs-down"></span></a> -->
+					<a (click)="thumbsUp(reviewData)" class="col-xs-1 pull-left"><span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;<span>{{reviewData.likes}}</span></a>
+					<a (click)="thumbsDown(reviewData)" class="col-xs-1 pull-left"><span class="glyphicon glyphicon-thumbs-down"></span>&nbsp;<span>{{reviewData.dislikes}}</span></a>
 				</div>
 			</li>
 		</ul>

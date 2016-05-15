@@ -56,4 +56,34 @@ export class ProductDetailsComponent extends User implements OnInit {
 			dislikes: 0
 		});
 	}
+	
+	thumbsUp(reviewData: any){
+		for(let review of this.product.reviews){
+			if(review.reviewedByEmail === reviewData.reviewedByEmail 
+				&& review.timeStamp === reviewData.timeStamp){
+				if(!review.likes){
+					review.likes = 1;
+				}
+				review.likes ++;
+				reviewData.likes = review.likes;
+			}
+		}
+		
+		this.productService.updateReview(reviewData, this.product);
+	}
+	
+	thumbsDown(reviewData: any){
+		for(let review of this.product.reviews){
+			if(review.reviewedByEmail === reviewData.reviewedByEmail 
+				&& review.timeStamp === reviewData.timeStamp){
+				if(!review.dislikes){
+					review.dislikes = 1;
+				}
+				review.dislikes ++;
+				reviewData.dislikes = review.dislikes;
+			}
+		}
+		
+		this.productService.updateReview(reviewData, this.product);
+	}
 }
