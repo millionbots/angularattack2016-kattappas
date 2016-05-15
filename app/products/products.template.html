@@ -6,16 +6,24 @@
         <div (click)="viewDetails(product, category)">
           <label class="col-xs-12 text-center product-name">{{product.name}}</label>
           <div class="col-xs-6">
-            <img [src]="product.imageUrl" class="col-xs-12"/>
+            <img [src]="product.imageUrl" class="col-xs-12" />
           </div>
           <div class="col-xs-6">
-            <p><label>Rating:</label><span>{{product.rating}}</span></p>
-            <p><label>Price:</label><span>${{product.price}}</span></p>
-            <p><label>Reviews:</label><span>{{product.reviews.length}}</span></p>
-
-            <!-- <p [innerHTML] = "productSpecs(product.specs)"></p> -->
+            <p>
+              <label>Rating:</label>
+              <span>{{product.rating}}</span>
+            </p>
+            <p>
+              <label>Price:</label>
+              <span>${{product.price}}</span>
+            </p>
+            <p>
+              <label>Reviews:</label>
+              <span>{{product.reviews.length}}</span>
+            </p>
           </div>
-        </li>
+        </div>
+      </li>
     </ul>
   </div>
 </div>
