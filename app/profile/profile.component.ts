@@ -66,5 +66,6 @@ export class ProfileComponent extends User implements OnInit {
 	}
 	updateUserDetails () {
 		this.userService.updateUserDetails(this.profileModel);
+		$('#geekProfileEditModal').modal('hide');
 	}
 }
