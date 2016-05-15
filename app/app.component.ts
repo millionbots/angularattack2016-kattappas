@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import {RouteConfig, ROUTER_DIRECTIVES, Router} from '@angular/router-deprecated';
 
 import {DashboardComponent} from './dashboard/dashboard.component.ts';
 import {LoginComponent} from './login/login.component.ts';
@@ -45,7 +45,8 @@ let styles = require('./main.scss');
 ])
 export class ReviewsComponent extends User { 
 
-  constructor(private userSvc: UserService){
+  constructor(private userSvc: UserService, 
+    private router: Router){
     super(userSvc);
   }
 
@@ -53,5 +54,6 @@ export class ReviewsComponent extends User {
     this.userSvc.clearUser();
     this.userName=null;
     this.email=null;
+    this.router.navigate(['Home']);
   }
 }

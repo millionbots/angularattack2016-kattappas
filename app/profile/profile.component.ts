@@ -8,6 +8,8 @@ let loginStyles = require('../login/login.scss');
 
 
 declare let c3: any;
+declare let $: any;
+
 @Component({
 	selector: 'profile',
 	template: profileTemplate,
