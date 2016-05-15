@@ -1,27 +1,24 @@
-.loginForm{
+.modal-body .row div { 
+	position: relative; 
+}
 
-	.modal-body .row div { 
-		position: relative; 
-	}
+.modal-body .row div .glyphicon {
+	position: absolute;
+	padding: 10px 10px;
+	pointer-events: none;
+}
 
-	.modal-body .row div .glyphicon {
-		position: absolute;
-		padding: 10px 10px;
-		pointer-events: none;
-	}
+.modal-body .row div input  { 
+	padding-left:  30px; 
+}
 
-	.modal-body .row div input  { 
-		padding-left:  30px; 
-	}
+.modal-footer div {
+	text-align: center;
+	padding: 10px 0;
+}
 
-	.modal-footer div {
-		text-align: center;
-		padding: 10px 0;
-	}
-
-	.modal-footer a {
-		text-decoration: underline;
-	}
+.modal-footer a {
+	text-decoration: underline;
 }
 
 

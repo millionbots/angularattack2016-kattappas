@@ -10,12 +10,14 @@ export class UserService {
     public getUserStatus () {
         return this.user;
     }
-    public setUserName (userName: string) {
-        localStorage.setItem("userName", userName);
-        this.user.next(userName);
+    public setUser (user: any) {
+        localStorage.setItem("userName", user.userName);
+        localStorage.setItem("email", user.email);
+        this.user.next(user.userName);
     }
-    public clearUserName (userName: string) {
+    public clearUser () {
         localStorage.removeItem("userName");
+        localStorage.removeItem("email");
         this.user.next('');
     }
 }

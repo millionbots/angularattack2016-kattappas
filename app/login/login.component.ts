@@ -72,7 +72,7 @@ export class LoginComponent extends User implements OnInit {
                 if (this.loginModel.password === user.password) {
                     console.log('super logged in');
                     $('#geekLoginModal').modal('hide');
-                    this.userService.setUserName(user.userName);
+                    this.userService.setUser(user);
                 } else {
                     console.log('in correct password');
                     return;

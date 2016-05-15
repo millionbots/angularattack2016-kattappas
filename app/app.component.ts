@@ -6,9 +6,10 @@ import {LoginComponent} from './login/login.component.ts';
 import {ProductsComponent} from "./products/products.component.ts";
 import {ProductsService} from "./products/products.service.ts";
 import {ProductDetailsComponent} from "./productDetails/productdetails.component.ts";
+import {ProfileComponent} from './profile/profile.component.ts';
 
 let appTemplate = require('./app.template.html');
-let styles = require('./header.scss');
+let styles = require('./main.scss');
 
 @Component({
     selector: 'reviews',
@@ -24,13 +25,18 @@ let styles = require('./header.scss');
     component: ProductsComponent
   },
   {
+    path: '/profile',
+    name: 'Profile',
+    component: ProfileComponent
+  },
+  {
     path: '/',
     name: 'Home',
     component: DashboardComponent,
     useAsDefault: true
   },
   {
-    path: '/productDetails/:id',
+    path: '/productDetails/:id/:category',
     name: 'ProductDetails',
     component: ProductDetailsComponent
   }

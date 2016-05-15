@@ -1,0 +1,18 @@
+$app-bg-color: #B311E8;
+$app-text-color: #fff;
+
+header.navbar{
+	box-shadow: 0px 1px 5px #888888;
+	background-color: $app-bg-color; 
+	color: $app-text-color;
+}
+
+header a{
+	color: $app-text-color; 
+	font-weight: bold;
+}
+
+.no-padding{
+	padding: 0;
+}
+
