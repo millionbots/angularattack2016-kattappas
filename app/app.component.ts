@@ -12,7 +12,7 @@ let styles = require('./header.scss');
     selector: 'reviews',
     template: appTemplate,
     styles: ['' + styles],
-    directives: [DashboardComponent, LoginComponent, ProductsComponent, ROUTER_DIRECTIVES]
+    directives: [LoginComponent, ROUTER_DIRECTIVES]
 })
 @RouteConfig([
   {
