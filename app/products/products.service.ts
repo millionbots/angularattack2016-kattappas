@@ -13,6 +13,10 @@ export class ProductsService {
     public getProductsByCategory<FirebaseListObservable>(category: string) {
         return this.af.database.list(`/products/${category}`);
     }
+    
+    public getTopProducts(){
+        
+    }
 
     public saveProductReviews(category: string, productKey: string, review: any) {
         console.log(arguments);
@@ -20,14 +24,16 @@ export class ProductsService {
         console.log(products);
         let productsList = [];
         products.subscribe((prs) => {
-            //console.log(prs[prs.length - 1]);
             var prods = prs[prs.length - 1];
 
             for (var prod of prods) {
                 if (prod.$key === productKey) {
                     let reviews = prod.reviews;
+                    
+                    let rating = parseFloat((((prod.rating * prod.reviews.length + parseFloat(review.rating))/(prod.reviews.length + 1)).toFixed(3)));
+                    
                     reviews.push(review);
-                    var x = products.update(prod, { reviews: reviews });
+                    var x = products.update(prod, { reviews: reviews, rating: rating });
                     console.log(x);
                 }
             }
