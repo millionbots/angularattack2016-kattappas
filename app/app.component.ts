@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 import {DashboardComponent} from './dashboard/dashboard.component.ts';
 let appTemplate = require('./app.template.html');
 let styles = require('./header.scss');
