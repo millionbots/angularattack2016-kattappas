@@ -8,6 +8,14 @@
 						<a href="javascript: void(0);" data-toggle="modal" data-target="#geekProfileEditModal">
 						<i class="glyphicon glyphicon-pencil"></i></a>
 					</label>
+					<label class="col-sm-12 profile-links">
+						<i class="fa fa-twitter"></i>
+						<span>{{profileModel.twitter ? profileModel.twitter : 'NA'}}</span>
+					</label>
+					<label class="col-sm-12 profile-links" *ngIf="profileModel.youtube">
+						<i class="fa fa-youtube"></i>
+						<span>{{profileModel.youtube ? profileModel.youtube : 'NA'}}</span>
+					</label>
 				</div>
 			</div>
 		</div>

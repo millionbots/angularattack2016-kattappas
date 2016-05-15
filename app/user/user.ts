@@ -1,7 +1,7 @@
-import {OnInit, OnDestroy}  from '@angular/core';
+import {OnInit}  from '@angular/core';
 import {UserService} from './user.service.ts';
 let subscriber: any;
-export class User implements OnInit, OnDestroy {
+export class User implements OnInit {
     public userName: string;
     public email: string;
 
@@ -18,9 +18,4 @@ export class User implements OnInit, OnDestroy {
         });
     }
 
-    ngOnDestroy() {
-        if (subscriber && typeof subscriber.dispose !== "undefined") {
-            subscriber.dispose();
-        }
-    }
 }
