@@ -20,18 +20,17 @@
 					</div>
 					<div class="col-sm-offset-1 col-sm-5">
 						<label class="col-sm-12 profile-label">Latest Reviewed Gadgets</label>
-						<ul>
-							<li *ngFor="#review of latestReviews">{{review.review}} {{review.productName}}</li>
-						</ul>
+						<div *ngFor="#review of latestReviews">
+							<p><i class="fa fa-caret-right" aria-hidden="true"></i> {{review.productName}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-12">
-			<div class="col-sm-12 no-padding">
-				<ul>
-					<li *ngFor="#review of user.reviews">{{review.review}} {{review.productName}}</li>
-				</ul>
+			<div *ngFor="#review of latestReviews" class="col-xs-12 my-review">
+				<label>{{review.productName}}</label>
+				<p>{{review.review}}</p>
 			</div>
 		</div>
 	</div>
