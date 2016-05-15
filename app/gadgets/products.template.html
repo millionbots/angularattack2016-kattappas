@@ -1,8 +1,19 @@
 <div>
-  <div class="row category" *ngFor="let category of categories">
+  <div class="row category" *ngFor="#category of categories">
+    <h2 class="text-center">{{category}}</h2>
     <ul class="clearfix col-xs-12">
-        <li *ngFor="let product of products[category]" class="product col-lg-4">
-          <label class="col-xs-12">{{product.name}}</label>
+        <li *ngFor="#product of products[category]" class="product col-lg-3 clearfix no-padding">
+          <label class="col-xs-12 text-center product-name">{{product.name}}</label>
+          <div class="col-xs-6">
+            <img [src]="product.imageUrl" class="col-xs-12"/>
+          </div>
+          <div class="col-xs-6">
+            <p><label>Rating:</label><span>{{product.rating}}</span></p>
+            <p><label>Price:</label><span>${{product.price}}</span></p>
+            <p><label>Reviews:</label><span>{{product.reviews.length}}</span></p>
+
+            <!-- <p [innerHTML] = "productSpecs(product.specs)"></p> -->
+          </div>
         </li>
     </ul>
   </div>

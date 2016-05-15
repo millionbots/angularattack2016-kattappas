@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, DecimalPipe} from '@angular/core';
 import {ProductsService} from "./products.service.ts";
 import {Product} from "./products.model.ts";
 let productsTemplate = require("./products.template.html");
@@ -24,10 +24,18 @@ export class ProductsComponent implements OnInit {
 
     ngOnInit(){
         this.productsService.getProducts()
-            .subscribe(products => this.products = products );
+            .subscribe(products => {
+              this.products = products
+            });
     }
 
     get categories () {
       return Object.keys(this.products);
+    }
+
+    productSpecs (input){
+      var e = document.createElement('div');
+      e.innerHTML = input;
+      return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
     }
 }
