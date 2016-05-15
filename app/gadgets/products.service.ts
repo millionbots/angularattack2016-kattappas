@@ -7,6 +7,6 @@ export class ProductsService {
     }
 
     public getProducts<FirebaseListObservable>() {
-        return this.af.database.list('/products');
+        return this.af.database.object('/products');
     }
 }

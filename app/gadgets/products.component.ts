@@ -1,4 +1,4 @@
-import {Component, OnInit, DecimalPipe} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductsService} from "./products.service.ts";
 import {Product} from "./products.model.ts";
 let productsTemplate = require("./products.template.html");
@@ -9,17 +9,11 @@ let styles = require('./product.scss');
     providers: [ProductsService],
     template: productsTemplate,
     styles: ['' + styles]
-    // template: `<div>Products loaded...
-    //     <ul>
-    //         <li *ngFor="#product of products">{{product.name}}</li>
-    //     </ul>
-    // </div>`
 })
 export class ProductsComponent implements OnInit {
     products:any = {};
 
     constructor(private productsService: ProductsService) {
-
     }
 
     ngOnInit(){
@@ -33,7 +27,7 @@ export class ProductsComponent implements OnInit {
       return Object.keys(this.products);
     }
 
-    productSpecs (input){
+    productSpecs (input: any) {
       var e = document.createElement('div');
       e.innerHTML = input;
       return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
