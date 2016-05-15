@@ -9,27 +9,6 @@ let loginTemplate = require('./login.template.html');
 let styles = require('./login.scss');
 declare let $: any;
 
-interface ISignupForm {
-    userName?: Control;
-    password?: Control;
-    confirmPassword?: Control;
-    email?: Control;
-}
-
-interface ILoginForm {
-    userName?: Control;
-    password?: Control;
-}
-
-interface ValidationResult {
-    [key: string]: boolean;
-}
-
-interface ValidatorFn { (c: Control): { [key: string]: any }; }
-interface AsyncValidatorFn {
-    (c: Control): any /*Promise<{[key: string]: any}>|Observable<{[key: string]: any}>*/;
-}
-
 @Component({
     selector: 'login',
     template: loginTemplate,
@@ -38,6 +17,7 @@ interface AsyncValidatorFn {
 export class LoginComponent extends User implements OnInit { 
 	public isNewUser: boolean = false;
     public userName: string;
+    public isValidPassword: boolean = false;
     users: FirebaseListObservable <any[]>;
 
     usersList: any[];
@@ -95,30 +75,14 @@ export class LoginComponent extends User implements OnInit {
             this.isNewUser = false;
         }
     }
-
-    private valueMatchesWith(valueToMatch: string): ValidatorFn {
-        return (control: Control) => {
-            if (control.value !== valueToMatch) {
-                return { "valueMatcher": { "requiredValue": valueToMatch, "actualValue": control.value } };
-            }
-
-            return null;
-        };
-    }
-
-    private userExists(af: any): AsyncValidatorFn {
-        var users: FirebaseListObservable <any[]> = af.database.list('/users');
-        
-        return (control: Control) => {
-            return users.subscribe((usersInFirebase: any) => {
-                for (var user of usersInFirebase) {
-                    if (user.email === control.value) {
-                        return { "userExists": { "userAlreadyExists": true } };
-                    }
-                }
-
-                return null;
-            });
-        };
+    
+    validatePasswords (element: any) {
+        if (this.signupModel.password !== this.signupModel.confirmPassword) {
+            $('.pwd').css({border: "1px solid red"});
+            this.isValidPassword = false;
+        } else {
+            $('.pwd').css({border: "1px solid green"});
+            this.isValidPassword = true;
+        }
     }
 }
