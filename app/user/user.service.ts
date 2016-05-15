@@ -24,6 +24,7 @@ export class UserService {
         localStorage.removeItem("userName");
         localStorage.removeItem("email");
         localStorage.removeItem("key");
+        localStorage.removeItem("user");
         this.user.next('');
     }
     getUsers () {

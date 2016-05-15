@@ -18,7 +18,9 @@ export class ProfileComponent extends User implements OnInit {
 	public chart: any;
 	usefulReviews: any = 91.4;
 	totalReviews: any = 100;
-
+	public user: any;
+	public latestReviews: Array<any> = [];
+	
 	profileModel: any = {
 		email: '',
 		userName: '',
@@ -28,6 +30,16 @@ export class ProfileComponent extends User implements OnInit {
 	constructor(private userService: UserService) {
 		super(userService);
 		this.profileModel = this.userService.getUserData();
+		this.user = userService.getUserData();
+		if(!this.user.reviews){
+			this.latestReviews = [];
+		}
+		else if(this.user.reviews.length < 5){
+			this.latestReviews = this.user.reviews;
+		}
+		else{
+			this.latestReviews = this.user.reviews.slice(0, 4);
+		}
     }
 	ngOnInit() {
 		this.chart = c3.generate({
