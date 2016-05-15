@@ -1,5 +1,6 @@
 import {Component, OnInit}  from '@angular/core';
 import {UserService} from '../user/user.service.ts';
+import {User} from '../user/user.ts';
 
 let profileTemplate = require('./profile.template.html');
 let styles = require('./profile.scss');
@@ -12,7 +13,7 @@ declare let c3: any;
 	template: profileTemplate,
 	styles: ['' + styles + loginStyles]
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent extends User implements OnInit {
 
 	public chart: any;
 	usefulReviews: any = 91.4;
@@ -25,6 +26,7 @@ export class ProfileComponent implements OnInit {
 		youtube: ''
 	};
 	constructor(private userService: UserService) {
+		super(userService);
 		this.profileModel = this.userService.getUserData();
     }
 	ngOnInit() {

@@ -22,7 +22,7 @@ export class DashboardComponent {
                 
                 let allProds = Array.prototype.concat.apply([],[products.Cameras, products.Mobiles, products.Notebooks]);
                 
-                var sortedProds = allProds.sort(function(prod1, prod2){
+                var sortedProds = allProds.sort(function(prod1: any, prod2: any){
                     if(prod1.rating > prod2.rating)
                         return -1;
                     else if(prod1.rating < prod2.rating)
